@@ -1,0 +1,43 @@
+
+<form>
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" [(ngModel)] = 'name' name="average_weight" id="name" >
+  </div>
+  <div class="form-group">
+    <label for="average_height">Average Height</label>
+    <input type="number" [(ngModel)] = 'average_height' name="average_height" class="form-control" id="average_height">
+  </div>
+
+  <div class="form-group">
+    <label for="average_weight">Average Weight</label>
+    <input type="text" [(ngModel)] = 'average_weight' name="average_weight" class="form-control" id="average_weight" >
+  </div>
+
+  What class of the animal kingdom the animal is?
+  <select class="form-control" #option>
+    <option>N/A</option>
+    <option>Animal Kingdom</option>
+    <option>Zoo animal</option>
+  </select>
+
+
+
+  <div class="form-group" >
+    <label for="brief_description">Brief Description</label> <br>
+    <textarea name="description" id="brief_description" cols="30" rows="10" [(ngModel)] = 'description'></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="image_path">Image Path</label>
+    <input type="text" [(ngModel)] = 'image' class="form-control" name="image_path" id="image_path" >
+  </div>
+
+  <div class="form-group">
+    <label for="quantity">Quantity</label>
+    <input type="number" [(ngModel)] = 'quantity' class="form-control" name="quantity" id="quantity" >
+  </div>
+
+
+  <button type="submit" class="btn btn-default" (click)="onGetValue(option, $event)">Submit</button>
+</form>

@@ -1,0 +1,38 @@
+
+
+
+<div *ngIf="isValid">
+   <b>Data is valid.</b>
+</div>
+<div *ngIf="!isValid">
+   <b>Data is invalid.</b>
+</div>
+
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">Zoo Animals List</div>
+
+  <div class="panel-body">
+
+    <div class="animal col-md-4" *ngFor="let animal of animals">
+      <img src="{{animal.image}}" alt="Lion">
+      <h4>{{animal.name}}</h4>
+      <p>Average weight: {{animal.average_weight}}</p>
+      <p>Average height: {{animal.average_height}}</p>
+      <p>Description: {{animal.description}}</p>
+
+      <div *ngIf="isAnimalName !== animal.name">
+        <p>Quantity: {{animal.quantity}}</p>
+      </div>
+
+      <div *ngIf="isAnimalName == animal.name">
+        <input type="number" value= "{{animal.quantity }}" [(ngModel)] = "newQuantity" />
+      </div>
+
+
+      <p>Extreme large</p>
+      <button class="btn edit" data-name = {{animal.name}} (click)="onEdit(animal.name, animal.quantity)">Edit</button>
+    </div>
+  </div>
+</div>
