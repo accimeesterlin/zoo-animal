@@ -1,6 +1,12 @@
 # Zoo
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.3.
+
+# Currently having CORS Issues
+ Make sure you have this extension installed and activated. Editing feature is now working.
+ Currently pulling data from a fake API that I generated! 
+ 
+ [CORS Link](https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi?hl=en-US)
+ 
 
 ## Development server
 
