@@ -17,7 +17,7 @@ export class AnimalsComponent implements OnInit {
 
   newQuantity : any;
 
-  convertIntoJson(data){
+  convertIntoJson(data) {
      const animalJson = JSON.stringify(data);
      return animalJson;
    }
@@ -35,7 +35,7 @@ export class AnimalsComponent implements OnInit {
         for(let i = 0; i < animals.length; i++){
            if(this.animals[i]['name'] == name){
              this.animals[i]['quantity'] = quantity;
-             console.log('Quantity updated!')
+             console.log('Quantity updated!');
              this.saveToLocalStorage('animals', this.animals);
 
            }

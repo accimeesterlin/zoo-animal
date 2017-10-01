@@ -31,7 +31,7 @@ export class FormsComponent implements OnInit {
 
   getDataFromLocal(){
     this.list_animals = JSON.parse(localStorage.getItem('animals'));
-
+    
   }
 
 

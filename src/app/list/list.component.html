@@ -1,0 +1,17 @@
+
+
+<table class="table table-striped">
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Quantity</th>
+  </tr>
+  <tr *ngFor="let animal of list_animals; let i = index">
+     <td>{{i + 1}}</td>
+     <td>{{animal.name}}</td>
+     <td>{{animal.quantity}}</td>
+
+  </tr>
+</table>
+
+

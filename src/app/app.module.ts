@@ -9,13 +9,15 @@ import { AppComponent } from './app.component';
 import { FormsComponent } from './forms/forms.component';
 import { AnimalsComponent } from './animals/animals.component';
 import { HomeComponent } from './home/home.component';
+import { ListComponent } from './list/list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FormsComponent,
     AnimalsComponent,
-    HomeComponent
+    HomeComponent,
+    ListComponent
   ],
   imports: [
     BrowserModule,
@@ -30,6 +32,11 @@ import { HomeComponent } from './home/home.component';
       {
         path:'views',
         component: AnimalsComponent
+      },
+
+      {
+        path:'table',
+        component: ListComponent
       },
 
        {
