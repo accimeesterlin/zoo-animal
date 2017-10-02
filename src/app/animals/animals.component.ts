@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import {Http} from '@angular/http';
 
 @Component({
@@ -6,7 +6,7 @@ import {Http} from '@angular/http';
   templateUrl: './animals.component.html',
   styleUrls: ['./animals.component.css']
 })
-export class AnimalsComponent implements OnInit {
+export class AnimalsComponent  {
 
   animals:any;
   isValid = false;
@@ -81,8 +81,6 @@ export class AnimalsComponent implements OnInit {
     }
   }
 
-  ngOnInit() {
 
-  }
 
 }

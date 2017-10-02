@@ -1,24 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'forms',
   templateUrl: './forms.component.html',
   styleUrls: ['./forms.component.css']
 })
-export class FormsComponent implements OnInit {
+export class FormsComponent {
 
   constructor() { }
 
-  image : string;
-  quantity: number;
-  description: string;
-  average_weight: number;
-  average_height: number;
-  name: string;
   list_animals = [];
 
 
    convertIntoJson(data){
+
      const animalJson = JSON.stringify(data);
      return animalJson;
    }
@@ -31,35 +26,18 @@ export class FormsComponent implements OnInit {
 
   getDataFromLocal(){
     this.list_animals = JSON.parse(localStorage.getItem('animals'));
-    
+
   }
 
 
-  onGetValue( option, event){
+  onGetValue(f){
 
-    event.preventDefault();
-
+    let animal = f.value;
     this.getDataFromLocal();
-
-    let animal = {
-      name: this.name,
-      quantity:this.quantity,
-      option:option.value,
-      image:this.image,
-      description:this.description,
-      average_weight:this.average_weight,
-      average_height:this.average_height
-    };
-
+    console.log(animal);
     this.list_animals.push(animal);
-    console.log(this.list_animals);
     this.saveToLocalStorage(this.list_animals);
 
-  }
-
-
-
-  ngOnInit() {
   }
 
 }
